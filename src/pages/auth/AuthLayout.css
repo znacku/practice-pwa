@@ -44,6 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
 }
 
 .form-group label {
@@ -56,10 +57,12 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .form-group input {
-  width: 100%;
+  width: 100% !important;
+  box-sizing: border-box;
   padding: 1rem;
   background-color: var(--white);
   border: 1px solid var(--primary-blue);
