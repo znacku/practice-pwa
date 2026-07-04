@@ -5,7 +5,7 @@ function ForgotPassword({ onNavigate }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert(`Reset token dispatched to ${email}`)
+    alert(`Reset request dispatched to ${email}`)
     onNavigate('login')
   }
 
@@ -15,15 +15,12 @@ function ForgotPassword({ onNavigate }) {
         <span className="back-arrow"></span>
       </button>
 
-      <h1 className="auth-title" style={{ margin: '3rem 0 1.5rem 0' }}>Reset Password</h1>
-
-      <p style={{ color: 'var(--secondary-blue)', textAlign: 'center', marginBottom: '2.5rem', fontSize: '0.95rem', lineHeight: '1.4' }}>
-        Enter your registered agency email address below to receive verification recovery instructions.
-      </p>
+      {/* Header text match for 2-1_Forgot Password.png */}
+      <h1 className="auth-title">Forgot Password?</h1>
 
       <form className="auth-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Email Address</label>
+          <label>Email</label>
           <div className="input-wrapper">
             <input
               type="email"
@@ -35,13 +32,11 @@ function ForgotPassword({ onNavigate }) {
           </div>
         </div>
 
-        <button type="submit" className="btn-login" style={{ marginTop: '2rem' }}>Send Link</button>
+        {/* Button copy match */}
+        <button type="submit" className="btn-login" style={{ marginTop: '12rem' }}>
+          Send Request
+        </button>
       </form>
-
-      <div className="auth-footer-fixed">
-        Remembered your credentials?
-        <button className="footer-link" onClick={() => onNavigate('login')}>Sign In</button>
-      </div>
     </div>
   )
 }
