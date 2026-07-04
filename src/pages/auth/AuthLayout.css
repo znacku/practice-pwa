@@ -61,7 +61,7 @@
 }
 
 .form-group input {
-  width: 100% !important;
+  width: 100%;
   box-sizing: border-box;
   padding: 1rem;
   background-color: var(--white);
@@ -74,6 +74,10 @@
 
 .form-group input::placeholder {
   color: var(--secondary-blue);
+}
+
+.form-group input.password-input {
+  padding-right: 2.75rem;
 }
 
 .password-toggle {

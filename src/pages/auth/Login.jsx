@@ -38,7 +38,7 @@ function Login({ onNavigate }) {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
-              style={{ paddingRight: '2.5rem' }} // Safe zone for the icon
+              className='password-input'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
